@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../storage/img/imagenes\ para\ fondo\ de\ pantalla\ grandes\ para\ windows\ 7\ de\ estrellas.gif);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    height: 100%;
+    /* background: yellow; */
+    padding: 20px;
+}
+
+.left_side {
+    width: 18%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    gap: 35px;
+}
+
+.article_info {
+    display: flex;
+}
+
+.article_info img {
+    width: 40px;
+    height: 40px;
+}
+
+.info_div {
+    padding: 0px 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-size: 1.1rem;
+}

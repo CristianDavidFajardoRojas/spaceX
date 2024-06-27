@@ -8,7 +8,7 @@ let rockets = (await getAllRocketsData());
 ////////
 
 let currentPage = 0;
-let itemsPerPage = 4
+let itemsPerPage = 4;
 
 let body = document.querySelector(".body")
 body.innerHTML = rocketHTML(await getRocketData(1));

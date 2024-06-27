@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space X</title>
-    <script type= "module" src = "js/main.js" defer></script>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="body">
-    <!-- <header>
-        <h3>Vehicle Overview</h3>
+export const rocketHTML = data => {
+    let rocket = data.docs[0];
+    console.log(rocket)
+    
+    return /*html*/`
+    <header>
+        <h3>${rocket.name}</h3>
     </header>
     <main>
         <section class="left_side">
@@ -17,7 +12,7 @@
                 <img src="storage/img/document-ui-description-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Description:</strong>
-                    <p>the ability to lift into orbit over 54 metric tons (119,000 lb)--a mass equivalent to a 737 jetliner loaded with passengers, crew, luggage and fuel--Falcon Heavy can lift more than twice the payload of the next closest operational vehicle, the Delta IV Heavy, at one-third the cost.</p>
+                    <p>${rocket.description}</p>
                 </div>
             </article>
             <article class="article_info">
@@ -420,6 +415,6 @@
     </section>
     <div id="pagination">
     </div>
-</footer> -->
-</body>
-</html>
+    </footer>
+    `;
+}

@@ -84,9 +84,7 @@ main {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: 
-      radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-      conic-gradient(from 180deg, rgb(118, 189, 255) 24%, rgba(255, 192, 203, 0) 0);  
+    
   }
 
   .progress-bar > div {
@@ -150,12 +148,26 @@ main {
 
   .right_side {
     display: flex;
-    background: red;
+    flex-direction: column;
+    gap: 30px;
     width: 20%;
     height: 80%;
+    padding-left: 100px;
+    color: white;
+    overflow: scroll;
+    scrollbar-width: none;
   }
 
+  .right_side > article {
+    display: flex;
+    gap: 30px;
+    transform: scale(1.1);
+  }
 
+  .right_side > article > div {
+    display: flex;
+    flex-direction: column;
+  }
 
 
 

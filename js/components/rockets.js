@@ -3,6 +3,8 @@ import { getAllRocketsData } from "../modules/rocketsData.js";
 let allrockets = await getAllRocketsData();
 let maxWeigth;
 let maxSeaKn;
+let maxKgPayloads = 0;
+
 allrockets.forEach(dict => {
     maxWeigth = dict.mass.kg
     if(dict.mass.kg > maxWeigth) maxWeigth = dict.mass.kg
@@ -10,10 +12,10 @@ allrockets.forEach(dict => {
 
     maxSeaKn = dict.first_stage.thrust_sea_level.kN
     if(dict.first_stage.thrust_sea_level.kN > maxSeaKn) maxSeaKn = dict.first_stage.thrust_sea_level.kN
+
+
+    if(dict.payload_weights.kg > maxKgPayloads) maxKgPayloads = dict.payload_weights.kg
 })
-
-
-
 
 
 export const rocketHTML = data => {
@@ -25,27 +27,14 @@ export const rocketHTML = data => {
         imgPlantilla += `<article><img src="${img}" referrerpolicy="no-referrer"></article>`
     })
 
-
-    let plantillaProgressBar = `
-    <article>
-        <div>
-            <strong>Rocket weight</strong>
-            <progress value="${rocket.mass.kg}" max="${maxWeigth}"></progress>
-        </div>
-        <div>
-            <div>
-                <p>${rocket.mass.kg} kg</p>
-                <p>${rocket.mass.lb} lb</p>
-            </div>
-        </div>
-    </article>
-    `; 
+    let plantillaProgressBar = ``; 
     (rocket.payload_weights).forEach(dict => {
+        if(dict.kg > maxKgPayloads) maxKgPayloads = dict.kg
         plantillaProgressBar += `
     <article>
         <div>
             <strong>${dict.name}</strong>
-            <progress value="${dict.kg}" max="${dict.kg + dict.lb}"></progress>
+            <progress value="${dict.kg}" max="${maxKgPayloads}"></progress>
         </div>
         <div>
             <div>
@@ -55,6 +44,10 @@ export const rocketHTML = data => {
         </div>
     </article>`
     })
+
+
+
+
 
     return /*html*/`
     <header>
@@ -116,10 +109,10 @@ export const rocketHTML = data => {
                 <div class="circles">
                     <div class="progress-bar" style="background: 
                         radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-                        conic-gradient(from 180deg, rgb(118, 189, 255) ${rocket.first_stage.thrust_sea_level.kN / 1780 * 100}%, rgba(255, 192, 203, 0) 0);  ">
+                        conic-gradient(from 180deg, rgb(118, 189, 255) ${rocket.first_stage.thrust_sea_level.kN / maxSeaKn * 100}%, rgba(255, 192, 203, 0) 0);  ">
                         <div>
                             <strong>Atmospheric acceleration</strong>
-                            <p>${(rocket.first_stage.thrust_sea_level.kN / 1780 * 100).toFixed(2)} % </p>
+                            <p>${(rocket.first_stage.thrust_sea_level.kN / maxSeaKn * 100).toFixed(2)} % </p>
                             <p>${rocket.first_stage.thrust_sea_level.kN} kN</p>
                             <p>${rocket.first_stage.thrust_sea_level.lbf} Lbf</p>
                         </div>
@@ -129,10 +122,10 @@ export const rocketHTML = data => {
             
                 <div class="progress-bar" style="background: 
                     radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-                    conic-gradient(from 180deg, rgb(118, 189, 255) ${rocket.second_stage.thrust.kN / 1960 * 100}%, rgba(255, 192, 203, 0) 0);  ">
+                    conic-gradient(from 180deg, rgb(118, 189, 255) ${rocket.second_stage.thrust.kN / (rocket.engines.thrust_sea_level.kN + rocket.engines.thrust_vacuum.kN)  * 100}%, rgba(255, 192, 203, 0) 0);  ">
                     <div>
                         <strong>Speed in space</strong>
-                        <p>${(rocket.second_stage.thrust.kN / 1960 * 100).toFixed(2)} % </p>
+                        <p>${(rocket.second_stage.thrust.kN / (rocket.engines.thrust_sea_level.kN + rocket.engines.thrust_vacuum.kN)  * 100).toFixed(2)} % </p>
                         <p>${rocket.second_stage.thrust.kN} kN</p>
                         <p>${rocket.second_stage.thrust.lbf} Lbf</p>
                     </div>
@@ -206,6 +199,29 @@ export const rocketHTML = data => {
             </div>
         </section>
         <section class="right_side">
+        <article>
+        <div>
+            <strong>Rocket weight</strong>
+            <progress value="${rocket.mass.kg}" max="${maxWeigth}"></progress>
+        </div>
+        <div>
+            <div>
+                <p>${rocket.mass.kg} kg</p>
+                <p>${rocket.mass.lb} lb</p>
+            </div>
+        </div>
+    </article>
+    <article>
+        <div>
+            <strong>Succes rate percentage</strong>
+            <progress value="${rocket.success_rate_pct}" max="100"></progress>
+        </div>
+        <div>
+            <div>
+                <p>${rocket.success_rate_pct}%</p>
+            </div>
+        </div>
+    </article>
             ${plantillaProgressBar}
 
         </section>

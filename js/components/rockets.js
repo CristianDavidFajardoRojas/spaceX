@@ -2,21 +2,16 @@ import { getAllRocketsData } from "../modules/rocketsData.js";
 
 let allrockets = await getAllRocketsData();
 let maxWeigth;
-let maxSeaKn;
 let maxKgPayloads = 0;
 
+
 allrockets.forEach(dict => {
+    console.log(dict)
     maxWeigth = dict.mass.kg
     if(dict.mass.kg > maxWeigth) maxWeigth = dict.mass.kg
     
-
-    maxSeaKn = dict.first_stage.thrust_sea_level.kN
-    if(dict.first_stage.thrust_sea_level.kN > maxSeaKn) maxSeaKn = dict.first_stage.thrust_sea_level.kN
-
-
     if(dict.payload_weights.kg > maxKgPayloads) maxKgPayloads = dict.payload_weights.kg
 })
-
 
 export const rocketHTML = data => {
     let rocket = data.docs[0];
@@ -109,12 +104,12 @@ export const rocketHTML = data => {
                 <div class="circles">
                     <div class="progress-bar" style="background: 
                         radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-                        conic-gradient(from 180deg, rgb(118, 189, 255) ${rocket.first_stage.thrust_sea_level.kN / maxSeaKn * 100}%, rgba(255, 192, 203, 0) 0);  ">
+                        conic-gradient(from 180deg, rgb(118, 189, 255) ${rocket.engines.thrust_sea_level.kN * 100 / 1780}%, rgba(255, 192, 203, 0) 0);  ">
                         <div>
                             <strong>Atmospheric acceleration</strong>
-                            <p>${(rocket.first_stage.thrust_sea_level.kN / maxSeaKn * 100).toFixed(2)} % </p>
-                            <p>${rocket.first_stage.thrust_sea_level.kN} kN</p>
-                            <p>${rocket.first_stage.thrust_sea_level.lbf} Lbf</p>
+                            <p>${(rocket.engines.thrust_sea_level.kN * 100 / 1780).toFixed(2)} % </p>
+                            <p>${rocket.engines.thrust_sea_level.kN} kN</p>
+                            <p>${rocket.engines.thrust_sea_level.lbf} Lbf</p>
                         </div>
                     </div>
     
@@ -122,12 +117,12 @@ export const rocketHTML = data => {
             
                 <div class="progress-bar" style="background: 
                     radial-gradient(closest-side, rgb(31, 31, 31) 79%, transparent 80% 100%),
-                    conic-gradient(from 180deg, rgb(118, 189, 255) ${rocket.second_stage.thrust.kN / (rocket.engines.thrust_sea_level.kN + rocket.engines.thrust_vacuum.kN)  * 100}%, rgba(255, 192, 203, 0) 0);  ">
+                    conic-gradient(from 180deg, rgb(118, 189, 255) ${rocket.engines.thrust_vacuum.kN * 100 / 1960}%, rgba(255, 192, 203, 0) 0);  ">
                     <div>
                         <strong>Speed in space</strong>
-                        <p>${(rocket.second_stage.thrust.kN / (rocket.engines.thrust_sea_level.kN + rocket.engines.thrust_vacuum.kN)  * 100).toFixed(2)} % </p>
-                        <p>${rocket.second_stage.thrust.kN} kN</p>
-                        <p>${rocket.second_stage.thrust.lbf} Lbf</p>
+                        <p>${(rocket.engines.thrust_vacuum.kN * 100 / 1960).toFixed(2)} % </p>
+                        <p>${rocket.engines.thrust_vacuum.kN} kN</p>
+                        <p>${rocket.engines.thrust_vacuum.lbf} Lbf</p>
                     </div>
                 </div>
             </div>

@@ -159,7 +159,7 @@ export const rocketHTML = data => {
                         </article>
                         <article>
                             <p>Leg material</p>
-                            <strong>${rocket.landing_legs.material}</strong>
+                            <strong>${rocket.landing_legs.material == null ? "none" : rocket.landing_legs.material}</strong>
                         </article>
                     </div>
                 </div>
@@ -235,7 +235,7 @@ export const rocketHTML = data => {
         </article>
         <article>
             <img src="storage/img/capsule-space-capsule-svgrepo-com.svg">
-            <p>Capsules </p>
+            <p>Capsules</p>
             <div></div>
         </article>
         <article>

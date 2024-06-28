@@ -26,9 +26,6 @@ const initPagination = () => {
     const start = currentPage * itemsPerPage;
     const end = Math.min(start + itemsPerPage, rockets.length);
 
-    console.log(start)
-    console.log(end)
-
     for (let i = start; i < end; i++) {
         const pageButton = document.createElement('button');
         pageButton.innerText = i + 1;

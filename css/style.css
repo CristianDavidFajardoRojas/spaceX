@@ -167,9 +167,9 @@ main {
 
   .right_side > article {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 30px;
-
+    padding-left: 30px;
   }
 
   .right_side > article > div {

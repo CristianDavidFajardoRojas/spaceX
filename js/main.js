@@ -10,6 +10,9 @@ import { coreHTML } from "./components/cores.js";
 import { getAllCompanyData, getCompanyData } from "./modules/company.js";
 import { companyHTML } from "./components/company.js";
 
+import { getAllCrewsData, getCrewData } from "./modules/crewsData.js";
+import { crewHTML } from "./components/crews.js";
+
 const allPaginacion = async(funcionAllData, primerDato, dictAMostrar, plantilla) => {
 let allData = funcionAllData;
 
@@ -107,7 +110,10 @@ const footer = async() => {
                 footer();
             }
 
-
+            if(name.textContent == "Crew"){
+                allPaginacion(await getAllCrewsData(), crewHTML(await getCrewData(1)), getCrewData, crewHTML);
+                footer();
+            }
 
 
 

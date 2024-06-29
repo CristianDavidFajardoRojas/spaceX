@@ -15,7 +15,7 @@ export const companyHTML = data => {
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/country-flag-flags-svgrepo-com.svg">
+                <img src="storage/img/boss-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Founder:</strong>
                     <p>${company.founder}</p>
@@ -36,7 +36,7 @@ export const companyHTML = data => {
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/graphic-design-diameter-svgrepo-com.svg">
+                <img src="storage/img/company-folder-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>ID:</strong>
                     <p>${company.id}</p>
@@ -89,7 +89,7 @@ export const companyHTML = data => {
                         </article>
                         <article>
                             <p>State</p>
-                            <strong>${company.state}</strong>
+                            <strong>${company.headquarters.state}</strong>
                         </article>
                     </div>
                 </div>

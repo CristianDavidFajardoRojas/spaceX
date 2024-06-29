@@ -4,6 +4,9 @@ import { rocketHTML } from "./components/rockets.js";
 import { getAllCapsulesData, getCapsuleData  } from "./modules/capsulesData.js";
 import { capsuleHTML } from "./components/capsules.js";
 
+import { getAllCoresData, getCoreData } from "./modules/coresData.js";
+import { coreHTML } from "./components/cores.js";
+
 
 const allPaginacion = async(funcionAllData, primerDato, dictAMostrar, plantilla) => {
 let allData = funcionAllData;

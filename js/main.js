@@ -1,6 +1,9 @@
 import { getAllRocketsData, getRocketData } from "./modules/rocketsData.js";
 import { rocketHTML } from "./components/rockets.js";
 
+import { getAllCapsulesData, getCapsuleData  } from "./modules/capsulesData.js";
+import { capsuleHTML } from "./components/capsules.js";
+
 
 const allPaginacion = async(funcionAllData, primerDato, dictAMostrar, plantilla) => {
 let allData = funcionAllData;
@@ -84,8 +87,7 @@ const footer = async() => {
             } 
             
             if(name.textContent == "Capsules"){
-                console.log("asdsad")
-                allPaginacion(await getAllRocketsData(), rocketHTML(await getRocketData(3)), getRocketData, rocketHTML);
+                allPaginacion(await getAllCapsulesData(), capsuleHTML(await getCapsuleData(1)), getCapsuleData, capsuleHTML);
                 footer();
             }
 

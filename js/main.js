@@ -67,7 +67,6 @@ const initPagination = async() => {
         nextButton.onclick = () => changePage(0);
         pagination.appendChild(nextButton);
     }
-
 }
 
 //Inicia la paginaciòn.

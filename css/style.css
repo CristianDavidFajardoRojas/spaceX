@@ -32,6 +32,7 @@ main {
     height: 80%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     overflow-y: scroll;
     scrollbar-width: none;
     gap: 35px;
@@ -155,6 +156,7 @@ main {
   .right_side {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 30px;
     width: 20%;
     height: 80%;
@@ -300,4 +302,62 @@ main {
 .caja_capsule > div > article {
     display: flex;
     justify-content: space-between;
+}
+
+#laterales_capsule {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+
+
+
+
+
+/* CORES */
+.caja_core{
+  padding: 5px;
+  width: 270px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: white;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.caja_core > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.caja_core > div > article {
+  display: flex;
+  justify-content: space-between;
+}
+
+#section_inferior_core {
+  display: flex;
+  justify-content: center;
+}
+
+#core_articles {
+  height: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+#core_articles > article{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid white;
+  padding: 10px;
 }

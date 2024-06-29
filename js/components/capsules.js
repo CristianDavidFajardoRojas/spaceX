@@ -12,7 +12,7 @@ export const capsuleHTML = data => {
         <h3>${capsule.serial}</h3>
     </header>
     <main>
-        <section class="left_side">
+        <section class="left_side" id="laterales_capsule">
             <article class="article_info">
                 <img src="storage/img/document-ui-description-svgrepo-com.svg">
                 <div class="info_div">
@@ -72,7 +72,7 @@ export const capsuleHTML = data => {
                 </div>
             </div>
         </section>
-        <section class="right_side">
+        <section class="right_side" id="laterales_capsule">
         <article id="capsule_launches">
             <div>
                 <strong>Launches:</strong>

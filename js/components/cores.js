@@ -29,12 +29,34 @@ export const coreHTML = data => {
         </section>
         <section class="mid">
                 <div class="circles">
-    
-                <img src="storage/img/rocket.gif">
-            
+                    <div id="core_articles">
+                        <article>
+                            <strong>RTLS attempts</strong>
+                            <hr>
+                            <p>${core.rtls_attempts}</p>
+                        </article>
+                        <article>
+                            <strong>RTLS landings</strong>
+                            <hr>
+                            <p>${core.rtls_landings}</p>
+                        </article>
+                    </div>
+                    <img src="storage/img/rocket.gif">
+                    <div id="core_articles">
+                        <article>
+                                <strong>ASDS attempts</strong>
+                                <hr>
+                                <p>${core.asds_attempts}</p>
+                            </article>
+                            <article>
+                                <strong>ASDS landings</strong>
+                                <hr>
+                                <p>${core.asds_landings}</p>
+                            </article>
+                    </div>
                 </div>
     
-            <div class="text_images">
+            <div class="text_images" id="section_inferior_core">
                 <div class="caja_core">
                     <h3>INFORMATION CORE</h3>
                     <hr>
@@ -52,8 +74,6 @@ export const coreHTML = data => {
                             <strong>${core.block == null ? "no block" : core.block}</strong>
                         </article>
                     </div>
-                </div>
-                <div class="div_images">
                 </div>
             </div>
         </section>

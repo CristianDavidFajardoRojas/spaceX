@@ -7,6 +7,8 @@ import { capsuleHTML } from "./components/capsules.js";
 import { getAllCoresData, getCoreData } from "./modules/coresData.js";
 import { coreHTML } from "./components/cores.js";
 
+import { getAllCompanyData, getCompanyData } from "./modules/company.js";
+import { companyHTML } from "./components/company.js";
 
 const allPaginacion = async(funcionAllData, primerDato, dictAMostrar, plantilla) => {
 let allData = funcionAllData;
@@ -72,10 +74,12 @@ const initPagination = async() => {
 initPagination();
 }
 
+
 // Principio de la pagina, recien entra.
 allPaginacion(await getAllRocketsData(), rocketHTML(await getRocketData(1)), getRocketData, rocketHTML);
 
 
+// Footer.
 const footer = async() => {
     let articlesFooter = document.querySelectorAll(".footer > section > article");
 
@@ -99,7 +103,10 @@ const footer = async() => {
                 footer();
             }
 
-
+            if(name.textContent == "Company"){
+                allPaginacion(await getAllCompanyData(), companyHTML(await getAllCompanyData()), getAllCompanyData, companyHTML);
+                footer();
+            }
 
 
 

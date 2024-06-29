@@ -286,7 +286,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-top: -150px;
+
     color: white;
     border: 1px solid rgb(255, 255, 255);
   }
@@ -360,4 +360,46 @@ main {
   gap: 10px;
   border: 1px solid white;
   padding: 10px;
+}
+
+
+/* COMPANY */
+#laterales_company {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+#container_cajas_inferiores_company {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+#links_company {
+  padding-left: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  height: 470px;
+}
+
+#links_company > div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#links_company > div > a {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+#links_company > div > a > img {
+  width: 40px;
+  height: 40px;
 }

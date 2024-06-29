@@ -16,12 +16,12 @@ export const capsuleHTML = data => {
             <article class="article_info">
                 <img src="storage/img/document-ui-description-svgrepo-com.svg">
                 <div class="info_div">
-                    <strong>Description:</strong>
+                    <strong>Last Update:</strong>
                     <p>${capsule.last_update}</p>
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/country-flag-flags-svgrepo-com.svg">
+                <img src="storage/img/capsule-space-capsule-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>ID:</strong>
                     <p>${capsule.id}</p>
@@ -36,7 +36,7 @@ export const capsuleHTML = data => {
                 </div>
     
             <div class="text_images">
-                <div id = "caja_content">
+                <div class="caja_capsule">
                     <h3>INFORMATION CAPSULE</h3>
                     <hr>
                     <div>
@@ -55,9 +55,8 @@ export const capsuleHTML = data => {
                     </div>
                 </div>
                 <div class="div_images">
-                    <img src="storage/img/gif_Capsule.gif">
                 </div>
-                <div id = "caja_content">
+                <div class="caja_capsule">
                     <h3>LANDING INFORMATION</h3>
                     <hr>
                     <div>
@@ -77,11 +76,9 @@ export const capsuleHTML = data => {
         <article id="capsule_launches">
             <div>
                 <strong>Launches:</strong>
-            </div>
-            <div>
-                    <ol>
-                        ${launches}
-                    </ol>
+                <ul>
+                    ${launches}
+                </ul>
             </div>
         </article>
 

@@ -255,13 +255,49 @@ main {
 
 
   /* CAPSULES */
-  #capsule_launches{
-    background: red;
+
+  #capsule_launches > div {
     display: flex;
-    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-left: 40px ;
   }
 
-  #capsule_launches > ol > li{
-    background: rgb(42, 252, 0);
-    
+  #capsule_launches > div > strong{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
+
+  #capsule_launches > div > ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .caja_capsule{
+    padding: 5px;
+    width: 270px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: -150px;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+  }
+
+.caja_capsule > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+.caja_capsule > div > article {
+    display: flex;
+    justify-content: space-between;
+}

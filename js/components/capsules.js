@@ -31,7 +31,7 @@ export const capsuleHTML = data => {
         <section class="mid">
                 <div class="circles">
     
-                <img src="storage/img/rocket.gif">
+                <img src="https://spacecenter.org/wp-content/uploads/2020/01/KSC-20200117-PH-SPX01_0001_medium-e1678724652148.jpg">
             
                 </div>
     

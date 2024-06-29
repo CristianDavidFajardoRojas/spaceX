@@ -6,7 +6,7 @@ export const companyHTML = data => {
         <h3>${company.name}</h3>
     </header>
     <main>
-        <section class="left_side">
+        <section class="left_side" id="laterales_company">
             <article class="article_info">
                 <img src="storage/img/document-ui-description-svgrepo-com.svg">
                 <div class="info_div">
@@ -34,6 +34,7 @@ export const companyHTML = data => {
                     <strong>Founded:</strong>
                     <p>${company.founded}</p>
                 </div>
+            </article>
             <article class="article_info">
                 <img src="storage/img/graphic-design-diameter-svgrepo-com.svg">
                 <div class="info_div">
@@ -73,7 +74,7 @@ export const companyHTML = data => {
                     </div>
                 </div>
     
-            <div class="text_images">
+            <div class="text_images" id = "container_cajas_inferiores_company">
                 <div id = "caja_content">
                     <h3>HEADQUARTERS</h3>
                     <hr>
@@ -91,8 +92,6 @@ export const companyHTML = data => {
                             <strong>${company.state}</strong>
                         </article>
                     </div>
-                </div>
-                <div class="div_images">
                 </div>
                 <div id = "caja_content">
                     <h3>PARTICIPANTS</h3>
@@ -118,21 +117,25 @@ export const companyHTML = data => {
                 </div>
             </div>
         </section>
-        <section class="right_side">
+        <section class="right_side" id="laterales_company">
             <article id = "links_company">
                 <strong>LINKS:</strong>
                 <div>
                     <a href='${company.links.website}'>
                         <img src="https://play-lh.googleusercontent.com/GHgRpnJ0OcX7kxVw1zu2WYJ0jw6eMBw3jdnZA1xFhNagXBlYCK7_NAOYPcgp6qYrlgM=s94-rw">
+                        <p>Space X</p>
                     </a>
                     <a href='${company.links.flickr}'>
                         <img src="https://www.flickrhelp.com/hc/article_attachments/4419907666708/unnamed.png">
+                        <p>Flickr</p>
                     </a>
                     <a href='${company.links.twitter}'>
                         <img src="storage/img/twitter.svg">
+                        <p>Twitter</p>
                     </a>
                     <a href='${company.links.elon_twitter}'>
                         <img src="https://www.svgrepo.com/show/492802/smartphone-business-person.svg">
+                        <p>Elon Musk</p>
                     </a>
                 </div>
             </article>

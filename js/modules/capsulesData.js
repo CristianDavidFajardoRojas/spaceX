@@ -1,4 +1,4 @@
-export const getRocketData = async (page) => {
+export const getCapsuleData = async (page) => {
     let config = {
         method: "POST",
         headers: {"content-type":"application/json"},
@@ -16,7 +16,7 @@ export const getRocketData = async (page) => {
 
 
 
-export const getAllRocketsData = async () => {
+export const getAllCapsulesData = async () => {
     let res = await fetch(`https://api.spacexdata.com/v4/capsules`)
     return res.json();
 }

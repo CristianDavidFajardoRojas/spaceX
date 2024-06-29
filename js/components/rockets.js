@@ -6,7 +6,6 @@ let maxKgPayloads = 0;
 
 
 allrockets.forEach(dict => {
-    console.log(dict)
     maxWeigth = dict.mass.kg
     if(dict.mass.kg > maxWeigth) maxWeigth = dict.mass.kg
     

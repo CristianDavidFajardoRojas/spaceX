@@ -244,3 +244,24 @@ main {
     color: white;
     border: 1px solid white;
   }
+
+
+
+
+
+
+
+
+
+
+  /* CAPSULES */
+  #capsule_launches{
+    background: red;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #capsule_launches > ol > li{
+    background: rgb(42, 252, 0);
+    
+  }

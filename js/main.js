@@ -94,6 +94,11 @@ const footer = async() => {
                 footer();
             }
 
+            if(name.textContent == "Cores"){
+                allPaginacion(await getAllCoresData(), coreHTML(await getCoreData(1)), getCoreData, coreHTML);
+                footer();
+            }
+
 
 
 

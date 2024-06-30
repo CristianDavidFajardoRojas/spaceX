@@ -23,8 +23,8 @@ export const crewHTML = data => {
                 <img src="storage/img/wikipedia-logotype-of-earth-puzzle-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Wikipedia:</strong>
-                    <a href='${crew.wikipedia}'>
-                        <p>WIKIPEDIA</p>
+                    <a id="a_crew" href='${crew.wikipedia}'>
+                        <p>CLICK ME</p>
                     </a>
                 </div>
             </article>
@@ -33,15 +33,15 @@ export const crewHTML = data => {
                 <div class="circles">
                     <div id="core_articles">
                         <article>
-                            <strong>RTLS attempts</strong>
+                            <strong>AGENCY</strong>
                             <hr>
                             <p>${crew.agency}</p>
                         </article>
                     </div>
-                    <img src="storage/img/800_600.gif">
+                    <img src="${crew.image}" referrerpolicy="no-referrer">
                     <div id="core_articles">
                         <article>
-                                <strong>ASDS attempts</strong>
+                                <strong>STATUS</strong>
                                 <hr>
                                 <p>${crew.status}</p>
                             </article>
@@ -50,7 +50,7 @@ export const crewHTML = data => {
     
             <div class="text_images" id="section_inferior_core">
                 <div class="caja_core">
-                    <img src="${crew.image}" referrerpolicy="no-referrer">
+                    <img src="storage/img/800_600.gif">
                 </div>
             </div>
         </section>

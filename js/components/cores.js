@@ -128,7 +128,7 @@ export const coreHTML = data => {
         </article>
         <article>
             <img src="storage/img/pen-svgrepo-com.svg">
-            <p>Landspads</p>
+            <p>Landpads</p>
             <div></div>
         </article>
         <article>

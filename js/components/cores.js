@@ -41,7 +41,7 @@ export const coreHTML = data => {
                             <p>${core.rtls_landings}</p>
                         </article>
                     </div>
-                    <img src="storage/img/rocket.gif">
+                    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/3929fa45885079.584030d1c8fe0.gif">
                     <div id="core_articles">
                         <article>
                                 <strong>ASDS attempts</strong>

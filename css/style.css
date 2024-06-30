@@ -416,3 +416,24 @@ main {
   color: #ffffff;
   text-decoration: none;
 }
+
+
+
+
+
+
+
+
+/* DRAGONS */
+#right_side_dragons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 50px;
+}
+
+#dragon_thrusters_article {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}

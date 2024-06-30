@@ -20,6 +20,7 @@ import { getAllHistoryData, getHistoryData } from "./modules/historyData.js";
 import { historyHTML } from "./components/history.js";
 
 import { getAllLandpadsData, getLandpadData } from "./modules/landpadsData.js";
+import { landpadHTML } from "./components/landpads.js";
 
 
 
@@ -136,6 +137,12 @@ const footer = async() => {
                 allPaginacion(await getAllHistoryData(), historyHTML(await getHistoryData(1)), getHistoryData, historyHTML);
                 footer();
             }
+
+            if(name.textContent == "Landpads"){
+                allPaginacion(await getAllLandpadsData(), landpadHTML(await getLandpadData(1)), getLandpadData, landpadHTML);
+                footer();
+            }
+
 
 
 

@@ -14,6 +14,7 @@ import { getAllCrewsData, getCrewData } from "./modules/crewsData.js";
 import { crewHTML } from "./components/crews.js";
 
 import { getAllDragonsData, getDragonData } from "./modules/dragonsData.js";
+import { dragonHTML } from "./components/dragons.js";
 
 
 
@@ -78,10 +79,11 @@ const initPagination = async() => {
         pagination.appendChild(nextButton);
     }
 }
-
 //Inicia la paginaciòn.
 initPagination();
 }
+
+
 
 
 // Principio de la pagina, recien entra.
@@ -119,6 +121,11 @@ const footer = async() => {
 
             if(name.textContent == "Crew"){
                 allPaginacion(await getAllCrewsData(), crewHTML(await getCrewData(1)), getCrewData, crewHTML);
+                footer();
+            }
+
+            if(name.textContent == "Dragons"){
+                allPaginacion(await getAllDragonsData(), dragonHTML(await getDragonData(1)), getDragonData, dragonHTML);
                 footer();
             }
 

@@ -17,6 +17,7 @@ import { getAllDragonsData, getDragonData } from "./modules/dragonsData.js";
 import { dragonHTML } from "./components/dragons.js";
 
 import { getAllHistoryData, getHistoryData } from "./modules/historyData.js";
+import { historyHTML } from "./components/history.js";
 
 
 
@@ -129,6 +130,10 @@ const footer = async() => {
                 footer();
             }
 
+            if(name.textContent == "History"){
+                allPaginacion(await getAllHistoryData(), historyHTML(await getHistoryData(1)), getHistoryData, historyHTML);
+                footer();
+            }
 
 
 

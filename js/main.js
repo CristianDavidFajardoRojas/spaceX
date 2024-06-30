@@ -13,6 +13,13 @@ import { companyHTML } from "./components/company.js";
 import { getAllCrewsData, getCrewData } from "./modules/crewsData.js";
 import { crewHTML } from "./components/crews.js";
 
+import { getAllDragonsData, getDragonData } from "./modules/dragonsData.js";
+
+
+
+
+
+
 const allPaginacion = async(funcionAllData, primerDato, dictAMostrar, plantilla) => {
 let allData = funcionAllData;
 

@@ -21,7 +21,7 @@ export const capsuleHTML = data => {
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/capsule-space-capsule-svgrepo-com.svg">
+                <img src="storage/img/id.svg">
                 <div class="info_div">
                     <strong>ID:</strong>
                     <p>${capsule.id}</p>

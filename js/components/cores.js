@@ -20,7 +20,7 @@ export const coreHTML = data => {
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/cpu-svgrepo-com.svg">
+                <img src="storage/img/id.svg">
                 <div class="info_div">
                     <strong>ID:</strong>
                     <p>${core.id}</p>

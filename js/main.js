@@ -23,6 +23,7 @@ import { getAllLandpadsData, getLandpadData } from "./modules/landpadsData.js";
 import { landpadHTML } from "./components/landpads.js";
 
 import { getAllLaunchesData, getLaunchData } from "./modules/launchesData.js";
+import { launchHTML } from "./components/launches.js";
 
 
 
@@ -142,6 +143,11 @@ const footer = async() => {
 
             if(name.textContent == "Landpads"){
                 allPaginacion(await getAllLandpadsData(), landpadHTML(await getLandpadData(1)), getLandpadData, landpadHTML);
+                footer();
+            }
+
+            if(name.textContent == "Launches"){
+                allPaginacion(await getAllLaunchesData(), launchHTML(await getLaunchData(1)), getLaunchData, launchHTML);
                 footer();
             }
 

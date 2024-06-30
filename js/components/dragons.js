@@ -100,7 +100,7 @@ export const dragonHTML = data => {
                     </article>
                 </div>
     
-                <img src="storage/img/rocket.gif">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/7f74ab81505303.5d02aa15a7ab5.gif">
             
                 <div id="core_articles">
                     <article>
@@ -176,7 +176,7 @@ export const dragonHTML = data => {
                 </div>
             </div>
         </section>
-        <section class="right_side">
+        <section class="right_side" id="right_side_dragons">
             ${thrusterPlantilla}
         </section>
     </main>

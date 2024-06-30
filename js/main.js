@@ -19,6 +19,8 @@ import { dragonHTML } from "./components/dragons.js";
 import { getAllHistoryData, getHistoryData } from "./modules/historyData.js";
 import { historyHTML } from "./components/history.js";
 
+import { getAllLandpadsData, getLandpadData } from "./modules/landpadsData.js";
+
 
 
 

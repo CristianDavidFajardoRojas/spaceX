@@ -51,7 +51,7 @@ export const landpadHTML = data => {
                 </div>
     
             <div class="text_images">
-                <div class="caja_capsule">
+                <div class="caja_capsule" id="caja_landpad">
                     <article>
                         <strong>STATUS</strong>
                         <hr>
@@ -68,7 +68,7 @@ export const landpadHTML = data => {
                         <p>${landpad.landing_attempts}</p>
                     </article>
                 </div>
-                <div class="caja_capsule">
+                <div class="caja_capsule" id="caja_landpad">
                     <article>
                         <strong>REGION</strong>
                         <hr>
@@ -80,7 +80,7 @@ export const landpadHTML = data => {
                         <p>${landpad.locality}</p>
                     </article>
                 </div>
-                <div class="caja_capsule">
+                <div class="caja_capsule" id="caja_landpad">
                     <article>
                         <strong>LATITUDE</strong>
                         <hr>

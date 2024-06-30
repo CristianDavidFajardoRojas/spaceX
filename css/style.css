@@ -200,7 +200,7 @@ main {
 
   .footer > section {
     padding-top: 15px;
-    background: rgba(2, 2, 85, 0.534);
+    background: rgba(1, 1, 31, 0.534);
     color: rgb(182, 182, 182);
     display: flex;
     gap: 35px;
@@ -462,4 +462,24 @@ main {
 
 #wikipedia_logo_history {
   width: 70%;
+}
+
+
+
+
+
+
+
+/* LANDPADS */
+#caja_landpad {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  border: none;
+}
+
+#caja_landpad > article {
+  border: 1px solid white;
+  padding: 8px;
 }

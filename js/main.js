@@ -16,7 +16,7 @@ import { crewHTML } from "./components/crews.js";
 import { getAllDragonsData, getDragonData } from "./modules/dragonsData.js";
 import { dragonHTML } from "./components/dragons.js";
 
-
+import { getAllHistoryData, getHistoryData } from "./modules/historyData.js";
 
 
 

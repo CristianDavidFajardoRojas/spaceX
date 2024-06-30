@@ -437,3 +437,29 @@ main {
   flex-direction: column;
   gap: 15px;
 }
+
+
+
+
+
+
+
+
+
+
+/* HISTORY */
+#caja_core_history {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: none;
+}
+
+#caja_core_history > a{
+  display: flex;
+  justify-content: center;
+}
+
+#wikipedia_logo_history {
+  width: 70%;
+}

@@ -24,11 +24,12 @@ export const historyHTML = data => {
         </section>
         <section class="mid">
                 <div class="circles">
-                    <img src="https://media1.tenor.com/m/5KCe1u_4dgIAAAAC/space.gif" referrerpolicy="no-referrer">
+                    <img src="https://steamuserimages-a.akamaihd.net/ugc/868485179515737818/D61FB839FC3F44E083811C404E98218B1D63A2BC/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" referrerpolicy="no-referrer">
                 </div>
     
             <div class="text_images" id="section_inferior_core">
-                <div class="caja_core">
+                <div class="caja_core" id="caja_core_history">
+                    <h4>LINK:</h4>
                     <a href="${history.links.article}">
                     <img src="storage/img/wikipedia-logotype-of-earth-puzzle-svgrepo-com.svg" id="wikipedia_logo_history">
                     </a>
@@ -40,8 +41,8 @@ export const historyHTML = data => {
             <div>
                 <strong>Dates:</strong>
                 <ul>
-                    <li><strong>Event UTC:</strong>${history.event_date_utc}</li>
-                    <li><strong>Event unix:</strong>${history.event_date_unix}</li>
+                    <li><strong>Event UTC:</strong> ${history.event_date_utc}</li>
+                    <li><strong>Event unix:</strong> ${history.event_date_unix}</li>
                 </ul>
             </div>
         </article>

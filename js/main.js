@@ -22,6 +22,8 @@ import { historyHTML } from "./components/history.js";
 import { getAllLandpadsData, getLandpadData } from "./modules/landpadsData.js";
 import { landpadHTML } from "./components/landpads.js";
 
+import { getAllLaunchesData, getLaunchData } from "./modules/launchesData.js";
+
 
 
 

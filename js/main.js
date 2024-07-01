@@ -37,6 +37,8 @@ import { roadsterHTML } from "./components/roadster.js";
 import { getAllShipsData, getShipData } from "./modules/shipsData.js";
 import { shipHTML } from "./components/ships.js";
 
+import { getAllStarlinkData, getStarlinkData } from "./modules/starlinkData.js";
+
 
 
 
@@ -186,7 +188,10 @@ const footer = async() => {
                 footer();
             }            
 
-
+            if(name.textContent == "Ships"){
+                allPaginacion(await getAllShipsData(), shipHTML(await getShipData(1)), getShipData, shipHTML);
+                footer();
+            } 
 
 
 

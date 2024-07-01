@@ -26,6 +26,7 @@ import { getAllLaunchesData, getLaunchData } from "./modules/launchesData.js";
 import { launchHTML } from "./components/launches.js";
 
 import { getAlllaunchpadsData, getLaunchpadData } from "./modules/launchpadsData.js";
+import { launchdpadHTML } from "./components/launchpads.js";
 
 
 
@@ -150,6 +151,11 @@ const footer = async() => {
 
             if(name.textContent == "Launches"){
                 allPaginacion(await getAllLaunchesData(), launchHTML(await getLaunchData(1)), getLaunchData, launchHTML);
+                footer();
+            }
+
+            if(name.textContent == "Launchpads"){
+                allPaginacion(await getAlllaunchpadsData(), launchdpadHTML(await getLaunchpadData(1)), getLaunchpadData, launchdpadHTML);
                 footer();
             }
 

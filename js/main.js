@@ -34,6 +34,8 @@ import { payloadHTML } from "./components/payloads.js";
 import { getAllRoadsterData } from "./modules/roadsterData.js";
 import { roadsterHTML } from "./components/roadster.js";
 
+import { getAllShipsData, getShipData } from "./modules/shipsData.js";
+
 
 
 

@@ -61,6 +61,7 @@ main {
     height: 80%;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .circles {
@@ -518,3 +519,13 @@ main {
   gap: 40px;
   width: 100%;
 }
+
+
+
+
+
+
+
+
+
+/* ROADSTER */

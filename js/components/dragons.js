@@ -42,7 +42,7 @@ export const dragonHTML = data => {
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/height-svgrepo-com.svg">
+                <img src="storage/img/date-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Date of the first flight:</strong>
                     <p>${dragon.first_flight}</p>

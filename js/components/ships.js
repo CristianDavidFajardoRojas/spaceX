@@ -13,21 +13,21 @@ export const shipHTML = data => {
     <main>
         <section class="left_side">
             <article class="article_info">
-                <img src="storage/img/scales-scale-svgrepo-com.svg">
+                <img src="storage/img/terminal-emulator-nethunter-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Type:</strong>
                     <p>${ship.type}</p>
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/scales-scale-svgrepo-com.svg">
+                <img src="storage/img/et-legacy-svgrepo-com.svg">
                 <div class="info_div">
-                    <strong>Legacy ID::</strong>
+                    <strong>Legacy ID:</strong>
                     <p>${ship.legacy_id}</p>
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/scales-scale-svgrepo-com.svg">
+                <img src="storage/img/board-games-with-roles-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Roles:</strong>
                     <p>${ship.roles[0] ? ship.roles.join(", ") : "No roles"}</p>
@@ -41,7 +41,7 @@ export const shipHTML = data => {
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/scales-scale-svgrepo-com.svg">
+                <img src="storage/img/coordinates-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Latitude:</strong>
                     <p>${ship.latitude == null ? 0 : ship.latitude}</p>

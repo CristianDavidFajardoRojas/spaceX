@@ -25,6 +25,8 @@ import { landpadHTML } from "./components/landpads.js";
 import { getAllLaunchesData, getLaunchData } from "./modules/launchesData.js";
 import { launchHTML } from "./components/launches.js";
 
+import { getAlllaunchpadsData, getLaunchpadData } from "./modules/launchpadsData.js";
+
 
 
 

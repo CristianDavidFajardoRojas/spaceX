@@ -1,8 +1,5 @@
 export const launchHTML = data => {
     let launch = data.docs[0];
-    
-    console.log(launch.name)
-    console.log(launch.cores)
 
     return /*html*/`
     <header>
@@ -18,14 +15,14 @@ export const launchHTML = data => {
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/boss-svgrepo-com.svg">
+                <img src="storage/img/cute-rocket-launching-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Rocket:</strong>
                     <p>${launch.rocket}</p>
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/cost-round-svgrepo-com.svg">
+                <img src="storage/img/terminal-emulator-nethunter-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Net:</strong>
                     <p>${launch.net}</p>
@@ -58,7 +55,7 @@ export const launchHTML = data => {
                     <div id="core_articles">
                     </div>
     
-                    <img src="${launch.links.patch.large}" referrerpolicy="no-referrer">
+                    <img src="${launch.links.patch.large == null ? "https://previews.123rf.com/images/yoginta/yoginta2301/yoginta230100567/196853824-imagen-no-encontrada-ilustraci%C3%B3n-vectorial.jpg" : launch.links.patch.large}" referrerpolicy="no-referrer">
 
                     <div id="core_articles">
                     </div>
@@ -148,17 +145,17 @@ export const launchHTML = data => {
                         <p>PressKit</p>
                     </a>
                 </div>
-            </article>
-            <article>
-                <strong>Dates:</strong>
-                <ul>
-                    <li><strong>Static fire UTC:</strong> ${launch.static_fire_date_utc}</li>
-                    <li><strong>Static fire unix:</strong> ${launch.static_fire_date_unix}</li>
-                    <li><strong>UTC:</strong> ${launch.date_utc}</li>
-                    <li><strong>Unix:</strong> ${launch.date_unix}</li>
-                    <li><strong>Local:</strong> ${launch.date_local}</li>
-                    <li><strong>Date Precision:</strong> ${launch.date_precision}</li>
-                </ul>
+                <div id="dates_launches">
+                    <strong>DATES:</strong>
+                    <ul>
+                        <li><strong>Static fire UTC:</strong> ${launch.static_fire_date_utc}</li>
+                        <li><strong>Static fire unix:</strong> ${launch.static_fire_date_unix}</li>
+                        <li><strong>UTC:</strong> ${launch.date_utc}</li>
+                        <li><strong>Unix:</strong> ${launch.date_unix}</li>
+                        <li><strong>Local:</strong> ${launch.date_local}</li>
+                        <li><strong>Date Precision:</strong> ${launch.date_precision}</li>
+                    </ul>
+                </div>
             </article>
 
         </section>
@@ -180,7 +177,7 @@ export const launchHTML = data => {
             <p>Cores</p>
             <div></div>
         </article>
-        <article id="imhere">
+        <article>
             <img src="storage/img/company-folder-svgrepo-com.svg">
             <p>Company</p>
             <div></div>
@@ -205,7 +202,7 @@ export const launchHTML = data => {
             <p>Landpads</p>
             <div></div>
         </article>
-        <article>
+        <article id="imhere">
             <img src="storage/img/rocket-launch-svgrepo-com.svg">
             <p>Launches</p>
             <div></div>

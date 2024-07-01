@@ -483,3 +483,24 @@ main {
   border: 1px solid white;
   padding: 8px;
 }
+
+
+
+
+
+
+
+
+
+
+/* LAUNCHES */
+#dates_launches {
+
+  padding-top: 50PX;
+}
+
+#dates_launches > UL{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

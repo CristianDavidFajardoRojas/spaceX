@@ -28,6 +28,8 @@ import { launchHTML } from "./components/launches.js";
 import { getAlllaunchpadsData, getLaunchpadData } from "./modules/launchpadsData.js";
 import { launchdpadHTML } from "./components/launchpads.js";
 
+import { getAllPayloadsData, getPayloadData } from "./modules/payloadsData.js";
+
 
 
 

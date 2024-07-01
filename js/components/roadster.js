@@ -61,7 +61,7 @@ export const roadsterHTML = data => {
             </article>
         </section>
         <section class="mid">
-                <div class="circles">
+                <div class="circles" id="superior_roadster">
                     
                 <div id="core_articles">
                     <article>
@@ -103,7 +103,7 @@ export const roadsterHTML = data => {
 
             </div>
     
-            <div class="text_images">
+            <div class="text_images" id="inferior_roadster">
                 <div class="caja_capsule" id="caja_landpad">
                     <article>
                         <strong>APOAPSIS AU</strong>

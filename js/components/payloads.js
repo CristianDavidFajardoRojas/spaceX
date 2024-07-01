@@ -15,7 +15,7 @@ export const payloadHTML = data => {
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/document-ui-description-svgrepo-com.svg">
+                <img src="storage/img/orbit-space-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Orbit:</strong>
                     <p>${payload.orbit == null ? "No orbit" : payload.orbit}</p>
@@ -25,7 +25,7 @@ export const payloadHTML = data => {
                 <img src="storage/img/graphic-design-diameter-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Longitude:</strong>
-                    <p>${payload.first_flight}</p>
+                    <p>${payload.longitude == null ? 0 : payload.longitude}</p>
                 </div>
             </article>
             <article class="article_info">
@@ -85,7 +85,7 @@ export const payloadHTML = data => {
 
             </div>
     
-            <div class="text_images">
+            <div class="text_images" id = "inferior_payloads">
                 <div id = "caja_content">
                     <h3>PAYLOAD INFORMATION</h3>
                     <hr>

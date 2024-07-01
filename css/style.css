@@ -504,3 +504,17 @@ main {
   flex-direction: column;
   gap: 10px;
 }
+
+
+
+
+
+
+
+
+/* PAYLOADS */
+#inferior_payloads {
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+}

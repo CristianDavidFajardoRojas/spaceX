@@ -71,7 +71,7 @@ export const rocketHTML = data => {
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/height-svgrepo-com.svg">
+                <img src="storage/img/date-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Date of the first flight:</strong>
                     <p>${rocket.first_flight}</p>

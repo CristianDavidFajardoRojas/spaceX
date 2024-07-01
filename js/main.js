@@ -29,6 +29,7 @@ import { getAlllaunchpadsData, getLaunchpadData } from "./modules/launchpadsData
 import { launchdpadHTML } from "./components/launchpads.js";
 
 import { getAllPayloadsData, getPayloadData } from "./modules/payloadsData.js";
+import { payloadHTML } from "./components/payloads.js";
 
 
 
@@ -158,6 +159,11 @@ const footer = async() => {
 
             if(name.textContent == "Launchpads"){
                 allPaginacion(await getAlllaunchpadsData(), launchdpadHTML(await getLaunchpadData(1)), getLaunchpadData, launchdpadHTML);
+                footer();
+            }
+
+            if(name.textContent == "Payloads"){
+                allPaginacion(await getAllPayloadsData(), payloadHTML(await getPayloadData(1)), getPayloadData, payloadHTML);
                 footer();
             }
 

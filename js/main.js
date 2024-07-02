@@ -38,8 +38,7 @@ import { getAllShipsData, getShipData } from "./modules/shipsData.js";
 import { shipHTML } from "./components/ships.js";
 
 import { getAllStarlinkData, getStarlinkData } from "./modules/starlinkData.js";
-
-
+import { starlinkHTML } from "./components/starlink.js";
 
 
 
@@ -193,9 +192,10 @@ const footer = async() => {
                 footer();
             } 
 
-
-
-
+            if(name.textContent == "Starlink"){
+                allPaginacion(await getAllStarlinkData(), starlinkHTML(await getStarlinkData(1)), getStarlinkData, starlinkHTML);
+                footer();
+            } 
         })
     })
 }

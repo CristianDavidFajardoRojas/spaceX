@@ -21,7 +21,7 @@ export const roadsterHTML = data => {
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/height-svgrepo-com.svg">
+                <img src="storage/img/speed-meter-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Speed:</strong>
                     <p>Kph: ${roadster.speed_kph}, Mph: ${roadster.speed_mph}</p>

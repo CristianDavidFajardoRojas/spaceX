@@ -9,7 +9,7 @@ export const starlinkHTML = data => {
     <main>
         <section class="left_side" id="">
             <article class="article_info">
-                <img src="storage/img/terminal-emulator-nethunter-svgrepo-com.svg">
+                <img src="storage/img/version-history-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Version:</strong>
                     <p>${starlink.version == null ? "No version" : starlink.version}</p>
@@ -37,7 +37,7 @@ export const starlinkHTML = data => {
                 </div>
             </article>
             <article class="article_info">
-                <img src="storage/img/et-legacy-svgrepo-com.svg">
+                <img src="storage/img/speed-meter-svgrepo-com.svg">
                 <div class="info_div">
                     <strong>Velocity KMS:</strong>
                     <p>${starlink.velocity_kms == null ? 0 : starlink.velocity_kms}</p>

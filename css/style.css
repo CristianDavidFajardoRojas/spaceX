@@ -529,4 +529,48 @@ main {
 
 
 
-/* ROADSTER */
+/* STARLINK */
+#starlink_articles{
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+}
+
+#starlink_articles > article{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  padding: 10px;
+  gap: 5px;
+  color: white;
+}
+
+#starlink_img {
+  width: 660px;
+}
+
+#caja_starlink {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border: none;
+  gap: 22px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+#caja_starlink > article{
+  border: 1px solid white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+#rightside_starlink {
+  justify-content: start;
+  align-items: center;
+ 
+}
